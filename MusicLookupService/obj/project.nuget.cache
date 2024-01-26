@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "nvke1UadIvy8jzHhm+VYkm3eqqYwiT+wpGmbKQ8wE+dpBXY3oG6y5xkWpznGzpwroUPQoqHN6E8bNV0HM1LsNA==",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupService\\MusicLookupService.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.5\\microsoft.visualstudio.azure.containers.tools.targets.1.19.5.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
