@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicLookupService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d4cc94582f2127c99f8135dda167ca2e8266cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0642802d6155306729444a6c08823548b963aaf7")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicLookupService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicLookupService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
