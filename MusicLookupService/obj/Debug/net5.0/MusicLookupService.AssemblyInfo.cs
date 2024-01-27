@@ -11,11 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("176d192b-c0b1-4a3d-986d-7551280f2412")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("968d5689-5738-41d0-ae78-329071d5ed78")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicLookupService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1ba795373498bdab0e65f9cf489f992aa42916c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d4cc94582f2127c99f8135dda167ca2e8266cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicLookupService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicLookupService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
