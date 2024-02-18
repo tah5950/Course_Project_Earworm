@@ -2,6 +2,7 @@
 
 namespace EarwormWebApp.DataStructures
 {
+    //Object used to help display track information in the UI
     public class FormattedTrack
     {
         public FormattedTrack(string name, string artists, string duration, string album)
@@ -17,6 +18,9 @@ namespace EarwormWebApp.DataStructures
         public string Duration { get; set; }
         public string Album { get; set; }
 
+        //Helper method to convert a list to FullTracks to FormattedTracks
+        //List of SimpleArtists condensed into comma separated list string.
+        //Duration in milliseconds is converted to hh:mm:ss:fff format
         public static List<FormattedTrack> fullTrackstoFormattedTracks(List<FullTrack> trackList)
         {
             List<FormattedTrack> formattedTracks = new List<FormattedTrack>();

@@ -11,7 +11,6 @@ namespace MusicLookupClientProxy
         private HttpClient httpClient;
         public MusicLookupClientProxy() 
         {
-            //string basePath = ConfigurationManager.AppSettings["MusicLookupService"];
             string basePath = "http://localhost:5000";
             httpClient = new()
             {

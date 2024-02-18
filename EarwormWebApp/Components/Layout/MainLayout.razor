@@ -112,6 +112,8 @@
     //These variables will store user input from the radio buttons and search bar text
     private string SearchText = "";
     private int SearchType = 0;
+
+    //Variables used for error handling
     private string ErrorText = "";
     private bool showError = false;
 
@@ -126,8 +128,11 @@
     //Client to call the Service
     private MusicLookupClientProxy client = new MusicLookupClientProxy();
 
+    //Triggered by button click. Calls client methods which in turn call the webservice and returns results.
+    //Also catches errors thrown by the client or server and displays them on UI
     private void SearchMusic()
     {
+        showError = false;
         try
         {
             if (SearchType == 0)

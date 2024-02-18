@@ -4,6 +4,7 @@ namespace EarwormWebApp.DataStructures
 {
     public class FormattedArtist
     {
+        //Object used to help display artist information in the UI
         public FormattedArtist(string name, string genres, int followers)
         {
             Name = name;
@@ -15,6 +16,8 @@ namespace EarwormWebApp.DataStructures
         public string Genres { get; set; }
         public int Followers { get; set; }
 
+        //Helper method to convert a list to FullArtists to FormattedArtists
+        //List of Genres condensed into comma separated list string.
         public static List<FormattedArtist> fullArtiststoFormattedArtists(List<FullArtist> artistList)
         {
             List<FormattedArtist> formattedArtists = new List<FormattedArtist>();
