@@ -28,3 +28,12 @@ D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Proje
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\EarwormWebApp.pdb
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\EarwormWebApp.genruntimeconfig.cache
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\ref\EarwormWebApp.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\SpotifyAPI.Web.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\EarwormWebApp.csproj.AssemblyReference.cache
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\EarwormWebApp.csproj.CopyComplete
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\MusicLookupClientProxy.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\MusicLookupClientProxy.pdb
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\bin\Debug\net8.0\MusicLookupClientProxy.dll.config

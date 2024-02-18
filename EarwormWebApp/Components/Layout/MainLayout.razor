@@ -1,10 +1,22 @@
 ﻿@inherits LayoutComponentBase
-
+@using SpotifyAPI.Web
+@using MusicLookupClientProxy
+@using EarwormWebApp.DataStructures
 
 <head>
     <style>
-        .myDiv {
+        .headingText {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: auto;
+            padding: 100px;
+        }
+        .searchAlignment{
+            text-align: center;
+            margin: auto;
+            padding: 100px;
+        }
+        .table{
             text-align: center;
             margin: auto;
             padding: 100px;
@@ -18,10 +30,63 @@
         <div class="top-row px-4">
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
         </div>
-        <div class="myDiv">
-            <h2>This is a heading in a div element</h2>
-            <p>This is some text in a div element.</p>
+        <div class="headingText">
+            <h2>Search For A Song Or Artist</h2>
         </div>
+        <div class="searchAlignment">
+            <InputRadioGroup @bind-Value="SearchType">
+                <InputRadio Value="0"/> Song
+                <InputRadio Value="1"/> Artist
+            </InputRadioGroup>
+            <InputText @bind-Value="SearchText"/>
+            <button class="btn btn-primary" @onclick="SearchMusic">Click me</button>
+        </div>
+        @if (songTableShown)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Duration</th>
+                        <th>Album</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var track in tracks)
+                    {
+                        <tr>
+                            <td>@track.Name</td>
+                            <td>@track.Artists</td>
+                            <td>@track.Duration</td>
+                            <td>@track.Album</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        @if (artistTableShown)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                        <th>Followers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var artist in artists)
+                    {
+                        <tr>
+                            <td>@artist.Name</td>
+                            <td>@artist.Genres</td>
+                            <td>@artist.Followers</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
     </main>
 </div>
 
@@ -30,3 +95,78 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+
+@code {
+    private string SearchText = "";
+    private int SearchType = 0;
+
+    private IEnumerable<FormattedTrack> tracks = Enumerable.Empty<FormattedTrack>();
+    private IEnumerable<FormattedArtist> artists = Enumerable.Empty<FormattedArtist>();
+
+    private bool songTableShown = false;
+    private bool artistTableShown = false;
+
+    private MusicLookupClientProxy client = new MusicLookupClientProxy();
+
+    private void SearchMusic()
+    {
+        if(SearchType == 0)
+        {
+            artistTableShown = false;
+            songTableShown = true;
+            tracks = formatTracks(client.GetTracks(SearchText).Result);
+        }
+        else if (SearchType == 1)
+        {
+            songTableShown = false;
+            artistTableShown = true;
+            artists = formatArtists(client.GetArtists(SearchText).Result);
+        }
+    }
+
+    private List<FormattedTrack> formatTracks(List<FullTrack> trackList)
+    {
+        List<FormattedTrack> formattedTracks = new List<FormattedTrack>();
+        foreach(FullTrack track in trackList)
+        {
+            string duration = TimeSpan.FromMilliseconds(track.DurationMs).ToString(@"hh\:mm\:ss\:fff");
+            string artists = "";
+            foreach(SimpleArtist artist in track.Artists)
+            {
+                if(artists.Length == 0)
+                {
+                    artists += artist.Name;
+                }
+                else
+                {
+                    artists += ", " + artist.Name;
+                }
+            }
+            formattedTracks.Add(new FormattedTrack(track.Name, artists, duration, track.Album.Name));
+        }
+        return formattedTracks;
+    }
+
+    private List<FormattedArtist> formatArtists(List<FullArtist> artistList)
+    {
+        List<FormattedArtist> formattedArtists = new List<FormattedArtist>();
+        foreach (FullArtist artist in artistList)
+        {
+            string genres = "";
+            foreach (string genre in artist.Genres)
+            {
+                if (genres.Length == 0)
+                {
+                    genres += genre;
+                }
+                else
+                {
+                    genres += ", " + genre;
+                }
+            }
+            formattedArtists.Add(new FormattedArtist(artist.Name, genres, artist.Followers.Total));
+        }
+        return formattedArtists;
+    }
+}

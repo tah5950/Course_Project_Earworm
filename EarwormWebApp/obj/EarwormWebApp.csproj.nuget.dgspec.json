@@ -27,7 +27,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj": {
+                "projectPath": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -39,6 +43,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -54,6 +64,75 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj",
+        "projectName": "MusicLookupClientProxy",
+        "projectPath": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj",
+        "packagesPath": "C:\\Users\\Trevor Howat\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Trevor Howat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "SpotifyAPI.Web": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

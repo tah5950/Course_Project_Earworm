@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "7DQD/lytz/lOfQfml1camiNrWdtwrd5kCmueUY8ABKs0oGgCg0A+wscdL/BwgBL7fbpCFDRUVUKnXOE3/EfNIQ==",
+  "dgSpecHash": "o+CYPjuVznSiqeP1BmkCd9s97rjIxJ0+f4MGiajyc2XkVrmLnt6liesNpGVVPIvQel8CleR82QUz3uGrM6yaIw==",
   "success": true,
   "projectFilePath": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\EarwormWebApp.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\spotifyapi.web\\7.1.1\\spotifyapi.web.7.1.1.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\Trevor Howat\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

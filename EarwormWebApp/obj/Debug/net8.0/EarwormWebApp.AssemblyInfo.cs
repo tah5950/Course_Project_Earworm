@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EarwormWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52caa62f1d7994e5be6b0685ab01712ca1eb69eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b7a62f3a719b7b8f151eee34e21cfc68160ead7")]
 [assembly: System.Reflection.AssemblyProductAttribute("EarwormWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EarwormWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

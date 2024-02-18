@@ -10,7 +10,8 @@ namespace MusicLookupClientProxy
         private HttpClient httpClient;
         public MusicLookupClientProxy() 
         {
-            string basePath = ConfigurationManager.AppSettings["MusicLookupService"];
+            //string basePath = ConfigurationManager.AppSettings["MusicLookupService"];
+            string basePath = "http://localhost:5000";
             httpClient = new()
             {
                 BaseAddress = new Uri(basePath + "/MusicLookup")
@@ -21,7 +22,7 @@ namespace MusicLookupClientProxy
         {
             try
             {
-                using HttpResponseMessage response = await httpClient.GetAsync(httpClient.BaseAddress + "/GetSong?keyword=" + keyword);
+                using HttpResponseMessage response = Task.Run(() => httpClient.GetAsync(httpClient.BaseAddress + "/GetSong?keyword=" + keyword)).Result;
                 response.EnsureSuccessStatusCode();
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -42,7 +43,7 @@ namespace MusicLookupClientProxy
         {
             try
             {
-                using HttpResponseMessage response = await httpClient.GetAsync(httpClient.BaseAddress + "/GetArtist?keyword=" + keyword);
+                using HttpResponseMessage response = Task.Run(() => httpClient.GetAsync(httpClient.BaseAddress + "/GetArtist?keyword=" + keyword)).Result;
                 response.EnsureSuccessStatusCode();
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
