@@ -9,6 +9,7 @@ using SpotifyAPI.Web;
 
 namespace MusicLookupService.Controllers
 {
+    //Sets up the API Controllers
     [ApiController]
     [Route("[controller]")]
     public class MusicLookupController : ControllerBase
@@ -18,11 +19,19 @@ namespace MusicLookupService.Controllers
 
         private readonly ILogger<MusicLookupController> _logger;
 
+        //Initailizes Default logger
         public MusicLookupController(ILogger<MusicLookupController> logger)
         {
             _logger = logger;
         }
 
+        /// <summary>
+        /// Get Method to get a list of songs matching a string keyword
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns>
+        /// Search response containing matches
+        /// </returns>
         [HttpGet]
         [Route("GetSong")]
         public async Task<SearchResponse> GetSong(string keyword)
@@ -37,6 +46,13 @@ namespace MusicLookupService.Controllers
             return response.Result;
         }
 
+        /// <summary>
+        /// Get Method to get a list of Artists matching a string keyword
+        /// </summary>
+        /// <param name="keyword"></param>
+        /// <returns>
+        /// Search response containing matches
+        /// </returns>
         [HttpGet]
         [Route("GetArtist")]
         public async Task<SearchResponse> GetArtist(string keyword)

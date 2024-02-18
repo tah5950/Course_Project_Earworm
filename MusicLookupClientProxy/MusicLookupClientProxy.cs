@@ -6,9 +6,12 @@ using System.Text.RegularExpressions;
 
 namespace MusicLookupClientProxy
 {
+    //Proxy for app to use to call the webservice
     public class MusicLookupClientProxy
     {
         private HttpClient httpClient;
+        
+        //Initializes HttpClient with basepath and baseAddress
         public MusicLookupClientProxy() 
         {
             string basePath = "http://localhost:5000";
@@ -18,6 +21,10 @@ namespace MusicLookupClientProxy
             };
         }
 
+        //Method calls the getSong Endpoint and parses out the list of songs from the search response.
+        //Method ensures a successful status code and throws an exception if there is an error.
+        //Method validates that string input is alpha numeric or $ or &. Throws an exception otherwise
+        //The method returns a list of FullTracks
         public async Task<List<FullTrack>> GetTracks(string keyword)
         {
             try
@@ -43,6 +50,10 @@ namespace MusicLookupClientProxy
             }
         }
 
+        //Method calls the getArtist Endpoint and parses out the list of artists from the search response.
+        //Method ensures a successful status code and throws an exception if there is an error.
+        //Method validates that string input is alpha numeric or $ or &. Throws an exception otherwise
+        //The method returns a list of FullArtists
         public async Task<List<FullArtist>> GetArtists(string keyword)
         {
             try
@@ -68,6 +79,8 @@ namespace MusicLookupClientProxy
             }
         }
 
+        //Method validates that input string is alphanumeric + $ + &.
+        //Returns true if it is, false if it is not
         private bool validateInput(string input)
         {
             if (Regex.IsMatch(input, @"^[a-zA-Z0-9&$]+$"))
