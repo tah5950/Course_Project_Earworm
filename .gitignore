@@ -7,3 +7,10 @@ MusicLookupClientProxy/.vs/MusicLookupClientProxy/v17/.suo
 *.cache
 *.cache
 *.vsidx
+*.v2
+*.testlog
+*.bin
+*.manifest
+*.dll
+*.exe
+*.pdb
