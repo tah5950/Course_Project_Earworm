@@ -9,12 +9,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
             margin: auto;
-            padding: 50px;
+            padding: 25px;
         }
         .searchAlignment{
             text-align: center;
             margin: auto;
-            padding: 50px;
+            padding: 10px;
         }
         .table{
             text-align: center;
@@ -25,10 +25,9 @@
 </head>
 
 <div class="page">
-
     <main>
         <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <a href="https://github.com/tah5950/Course_Project_Earworm" target="_blank">Github</a>
         </div>
         <div class="headingText">
             <h2>Search For A Song Or Artist</h2>
@@ -115,58 +114,13 @@
         {
             artistTableShown = false;
             songTableShown = true;
-            tracks = formatTracks(client.GetTracks(SearchText).Result);
+            tracks = FormattedTrack.fullTrackstoFormattedTracks(client.GetTracks(SearchText).Result);
         }
         else if (SearchType == 1)
         {
             songTableShown = false;
             artistTableShown = true;
-            artists = formatArtists(client.GetArtists(SearchText).Result);
+            artists = FormattedArtist.fullArtiststoFormattedArtists(client.GetArtists(SearchText).Result);
         }
-    }
-
-    private List<FormattedTrack> formatTracks(List<FullTrack> trackList)
-    {
-        List<FormattedTrack> formattedTracks = new List<FormattedTrack>();
-        foreach(FullTrack track in trackList)
-        {
-            string duration = TimeSpan.FromMilliseconds(track.DurationMs).ToString(@"hh\:mm\:ss\:fff");
-            string artists = "";
-            foreach(SimpleArtist artist in track.Artists)
-            {
-                if(artists.Length == 0)
-                {
-                    artists += artist.Name;
-                }
-                else
-                {
-                    artists += ", " + artist.Name;
-                }
-            }
-            formattedTracks.Add(new FormattedTrack(track.Name, artists, duration, track.Album.Name));
-        }
-        return formattedTracks;
-    }
-
-    private List<FormattedArtist> formatArtists(List<FullArtist> artistList)
-    {
-        List<FormattedArtist> formattedArtists = new List<FormattedArtist>();
-        foreach (FullArtist artist in artistList)
-        {
-            string genres = "";
-            foreach (string genre in artist.Genres)
-            {
-                if (genres.Length == 0)
-                {
-                    genres += genre;
-                }
-                else
-                {
-                    genres += ", " + genre;
-                }
-            }
-            formattedArtists.Add(new FormattedArtist(artist.Name, genres, artist.Followers.Total));
-        }
-        return formattedArtists;
     }
 }

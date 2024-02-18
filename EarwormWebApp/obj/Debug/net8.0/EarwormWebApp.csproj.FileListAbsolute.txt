@@ -20,7 +20,6 @@ D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Proje
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.EarwormWebApp.props
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
-D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\scopedcss\bundle\EarwormWebApp.styles.css
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\scopedcss\projectbundle\EarwormWebApp.bundle.scp.css
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\EarwormWebApp\obj\Debug\net8.0\EarwormWebApp.dll
