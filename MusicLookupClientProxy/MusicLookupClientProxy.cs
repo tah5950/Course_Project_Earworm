@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace MusicLookupClientProxy
 {
@@ -10,7 +11,7 @@ namespace MusicLookupClientProxy
         private HttpClient httpClient;
         public MusicLookupClientProxy() 
         {
-            string basePath = ConfigurationManager.AppSettings["MusicLookupService"];
+            string basePath = "http://localhost:5000";
             httpClient = new()
             {
                 BaseAddress = new Uri(basePath + "/MusicLookup")
@@ -21,7 +22,11 @@ namespace MusicLookupClientProxy
         {
             try
             {
-                using HttpResponseMessage response = await httpClient.GetAsync(httpClient.BaseAddress + "/GetSong?keyword=" + keyword);
+                if (!validateInput(keyword))
+                {
+                    throw new ArgumentException("Invalid Input");
+                }
+                using HttpResponseMessage response = Task.Run(() => httpClient.GetAsync(httpClient.BaseAddress + "/GetSong?keyword=" + keyword)).Result;
                 response.EnsureSuccessStatusCode();
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -42,7 +47,11 @@ namespace MusicLookupClientProxy
         {
             try
             {
-                using HttpResponseMessage response = await httpClient.GetAsync(httpClient.BaseAddress + "/GetArtist?keyword=" + keyword);
+                if (!validateInput(keyword))
+                {
+                    throw new ArgumentException("Invalid Input");
+                }
+                using HttpResponseMessage response = Task.Run(() => httpClient.GetAsync(httpClient.BaseAddress + "/GetArtist?keyword=" + keyword)).Result;
                 response.EnsureSuccessStatusCode();
 
                 var jsonResponse = await response.Content.ReadAsStringAsync();
@@ -57,6 +66,15 @@ namespace MusicLookupClientProxy
             {
                 throw ex;
             }
+        }
+
+        private bool validateInput(string input)
+        {
+            if (Regex.IsMatch(input, @"^[a-zA-Z0-9&$]+$"))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

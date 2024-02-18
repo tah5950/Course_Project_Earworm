@@ -424,6 +424,21 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
+      },
+      "MusicLookupClientProxy/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "SpotifyAPI.Web": "7.0.2",
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MusicLookupClientProxy.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MusicLookupClientProxy.dll": {}
+        }
       }
     }
   },
@@ -989,11 +1004,17 @@
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "MusicLookupClientProxy/1.0.0": {
+      "type": "project",
+      "path": "../../MusicLookupClientProxy/MusicLookupClientProxy.csproj",
+      "msbuildProject": "../../MusicLookupClientProxy/MusicLookupClientProxy.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.NET.Test.Sdk >= 17.9.0",
+      "MusicLookupClientProxy >= 1.0.0",
       "NUnit >= 4.0.1",
       "NUnit.Analyzers >= 4.0.1",
       "NUnit3TestAdapter >= 4.5.0",
@@ -1028,7 +1049,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj": {
+              "projectPath": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\MusicLookupClientProxy\\MusicLookupClientProxy.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

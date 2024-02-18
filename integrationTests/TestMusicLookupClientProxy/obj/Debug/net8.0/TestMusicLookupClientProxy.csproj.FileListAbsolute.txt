@@ -105,3 +105,7 @@ D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Proje
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\obj\Debug\net8.0\TestMusicLookupClientProxy.genruntimeconfig.cache
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\obj\Debug\net8.0\ref\TestMusicLookupClientProxy.dll
 D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\bin\Debug\net8.0\TestMusicLookupClientProxy.dll.config
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\bin\Debug\net8.0\CoverletSourceRootsMapping_TestMusicLookupClientProxy
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\bin\Debug\net8.0\MusicLookupClientProxy.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\bin\Debug\net8.0\MusicLookupClientProxy.pdb
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\integrationTests\TestMusicLookupClientProxy\bin\Debug\net8.0\MusicLookupClientProxy.dll.config

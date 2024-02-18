@@ -1,0 +1,157 @@
+﻿@inherits LayoutComponentBase
+@using SpotifyAPI.Web
+@using MusicLookupClientProxy
+@using EarwormWebApp.DataStructures
+
+<head>
+    <style>
+        .headingText {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: auto;
+            padding: 25px;
+        }
+        .searchAlignment{
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+        .table{
+            text-align: center;
+            margin: auto;
+            padding: 50px;
+        }
+        .errorDisplay{
+            text-align: center;
+            margin: auto;
+            padding: 5px;
+            color: red;
+        }
+    </style>
+</head>
+
+<div class="page">
+    <main>
+        <div class="top-row px-4">
+            <a href="https://github.com/tah5950/Course_Project_Earworm" target="_blank">Project Earworm Github</a>
+        </div>
+        <div class="headingText">
+            <h2>Search For A Song Or Artist</h2>
+        </div>
+        <div class="searchAlignment">
+            <InputRadioGroup @bind-Value="SearchType">
+                <InputRadio Value="0"/> Song
+                <InputRadio Value="1"/> Artist
+            </InputRadioGroup>
+            <InputText @bind-Value="SearchText"/>
+            <button class="btn btn-primary" @onclick="SearchMusic">Click me</button>
+        </div>
+        @if (showError)
+        {
+            <div class="errorDisplay">
+                Error: @ErrorText
+            </div>
+        }
+        @if (songTableShown)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Artist</th>
+                        <th>Duration</th>
+                        <th>Album</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var track in tracks)
+                    {
+                        <tr>
+                            <td>@track.Name</td>
+                            <td>@track.Artists</td>
+                            <td>@track.Duration</td>
+                            <td>@track.Album</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        @if (artistTableShown)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                        <th>Followers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var artist in artists)
+                    {
+                        <tr>
+                            <td>@artist.Name</td>
+                            <td>@artist.Genres</td>
+                            <td>@artist.Followers</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+
+@code {
+    //These variables will store user input from the radio buttons and search bar text
+    private string SearchText = "";
+    private int SearchType = 0;
+
+    //Variables used for error handling
+    private string ErrorText = "";
+    private bool showError = false;
+
+    //These structures hold the results of the call to the API to display as a table in the ui
+    private IEnumerable<FormattedTrack> tracks = Enumerable.Empty<FormattedTrack>();
+    private IEnumerable<FormattedArtist> artists = Enumerable.Empty<FormattedArtist>();
+
+    //Toggles the visibility of the results tables. Both are hidden to start.
+    private bool songTableShown = false;
+    private bool artistTableShown = false;
+
+    //Client to call the Service
+    private MusicLookupClientProxy client = new MusicLookupClientProxy();
+
+    //Triggered by button click. Calls client methods which in turn call the webservice and returns results.
+    //Also catches errors thrown by the client or server and displays them on UI
+    private void SearchMusic()
+    {
+        showError = false;
+        try
+        {
+            if (SearchType == 0)
+            {
+                artistTableShown = false;
+                songTableShown = true;
+                tracks = FormattedTrack.fullTrackstoFormattedTracks(client.GetTracks(SearchText).Result);
+            }
+            else if (SearchType == 1)
+            {
+                songTableShown = false;
+                artistTableShown = true;
+                artists = FormattedArtist.fullArtiststoFormattedArtists(client.GetArtists(SearchText).Result);
+            }
+        }
+        catch(Exception ex)
+        {
+            ErrorText = ex.Message;
+            showError = true;
+        }
+    }
+}

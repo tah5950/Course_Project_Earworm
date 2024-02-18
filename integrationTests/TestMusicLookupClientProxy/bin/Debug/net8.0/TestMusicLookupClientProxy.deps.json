@@ -9,6 +9,7 @@
       "TestMusicLookupClientProxy/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.9.0",
+          "MusicLookupClientProxy": "1.0.0",
           "NUnit": "4.0.1",
           "NUnit.Analyzers": "4.0.1",
           "NUnit3TestAdapter": "4.5.0",
@@ -356,6 +357,16 @@
             "fileVersion": "8.0.23.53103"
           }
         }
+      },
+      "MusicLookupClientProxy/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "SpotifyAPI.Web": "7.1.1",
+          "System.Configuration.ConfigurationManager": "8.0.0"
+        },
+        "runtime": {
+          "MusicLookupClientProxy.dll": {}
+        }
       }
     }
   },
@@ -462,6 +473,11 @@
       "sha512": "sha512-+TUFINV2q2ifyXauQXRwy4CiBhqvDEDZeVJU7qfxya4aRYOKzVBpN+4acx25VcPB9ywUN6C0n8drWl110PhZEg==",
       "path": "system.security.cryptography.protecteddata/8.0.0",
       "hashPath": "system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+    },
+    "MusicLookupClientProxy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

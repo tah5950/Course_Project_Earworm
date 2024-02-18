@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EarwormWebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EarwormWebApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EarwormWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EarwormWebApp.props",
+      "PackagePath": "build\\EarwormWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EarwormWebApp.props",
+      "PackagePath": "buildMultiTargeting\\EarwormWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EarwormWebApp.props",
+      "PackagePath": "buildTransitive\\EarwormWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

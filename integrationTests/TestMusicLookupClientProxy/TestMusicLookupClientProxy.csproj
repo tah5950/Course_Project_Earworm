@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -22,9 +22,13 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\MusicLookupClientProxy\MusicLookupClientProxy.csproj" />
+  </ItemGroup>
+
 	<Target Name="CopyAppConfig" AfterTargets="Build" DependsOnTargets="Build">
 		<CreateItem Include="$(OutputPath)$(AssemblyName).dll.config">
-			<Output TaskParameter="Include" ItemName="FilesToCopy"/>
+			<Output TaskParameter="Include" ItemName="FilesToCopy" />
 		</CreateItem>
 		<Copy SourceFiles="@(FilesToCopy)" DestinationFiles="$(OutputPath)testhost.dll.config" />
 	</Target>
