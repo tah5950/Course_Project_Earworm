@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MusicLookupClientProxy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b7a62f3a719b7b8f151eee34e21cfc68160ead7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e9b747ec1c25f5147cd76c0f15f0fc2c9b3aad8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MusicLookupClientProxy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MusicLookupClientProxy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

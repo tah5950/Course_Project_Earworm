@@ -21,13 +21,19 @@
             margin: auto;
             padding: 50px;
         }
+        .errorDisplay{
+            text-align: center;
+            margin: auto;
+            padding: 5px;
+            color: red;
+        }
     </style>
 </head>
 
 <div class="page">
     <main>
         <div class="top-row px-4">
-            <a href="https://github.com/tah5950/Course_Project_Earworm" target="_blank">Github</a>
+            <a href="https://github.com/tah5950/Course_Project_Earworm" target="_blank">Project Earworm Github</a>
         </div>
         <div class="headingText">
             <h2>Search For A Song Or Artist</h2>
@@ -40,6 +46,12 @@
             <InputText @bind-Value="SearchText"/>
             <button class="btn btn-primary" @onclick="SearchMusic">Click me</button>
         </div>
+        @if (showError)
+        {
+            <div class="errorDisplay">
+                Error: @ErrorText
+            </div>
+        }
         @if (songTableShown)
         {
             <table class="table">
@@ -97,30 +109,44 @@
 
 
 @code {
+    //These variables will store user input from the radio buttons and search bar text
     private string SearchText = "";
     private int SearchType = 0;
+    private string ErrorText = "";
+    private bool showError = false;
 
+    //These structures hold the results of the call to the API to display as a table in the ui
     private IEnumerable<FormattedTrack> tracks = Enumerable.Empty<FormattedTrack>();
     private IEnumerable<FormattedArtist> artists = Enumerable.Empty<FormattedArtist>();
 
+    //Toggles the visibility of the results tables. Both are hidden to start.
     private bool songTableShown = false;
     private bool artistTableShown = false;
 
+    //Client to call the Service
     private MusicLookupClientProxy client = new MusicLookupClientProxy();
 
     private void SearchMusic()
     {
-        if(SearchType == 0)
+        try
         {
-            artistTableShown = false;
-            songTableShown = true;
-            tracks = FormattedTrack.fullTrackstoFormattedTracks(client.GetTracks(SearchText).Result);
+            if (SearchType == 0)
+            {
+                artistTableShown = false;
+                songTableShown = true;
+                tracks = FormattedTrack.fullTrackstoFormattedTracks(client.GetTracks(SearchText).Result);
+            }
+            else if (SearchType == 1)
+            {
+                songTableShown = false;
+                artistTableShown = true;
+                artists = FormattedArtist.fullArtiststoFormattedArtists(client.GetArtists(SearchText).Result);
+            }
         }
-        else if (SearchType == 1)
+        catch(Exception ex)
         {
-            songTableShown = false;
-            artistTableShown = true;
-            artists = FormattedArtist.fullArtiststoFormattedArtists(client.GetArtists(SearchText).Result);
+            ErrorText = ex.Message;
+            showError = true;
         }
     }
 }

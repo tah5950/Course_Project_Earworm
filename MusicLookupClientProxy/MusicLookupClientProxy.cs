@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace MusicLookupClientProxy
 {
@@ -22,6 +23,10 @@ namespace MusicLookupClientProxy
         {
             try
             {
+                if (!validateInput(keyword))
+                {
+                    throw new ArgumentException("Invalid Input");
+                }
                 using HttpResponseMessage response = Task.Run(() => httpClient.GetAsync(httpClient.BaseAddress + "/GetSong?keyword=" + keyword)).Result;
                 response.EnsureSuccessStatusCode();
 
@@ -43,6 +48,10 @@ namespace MusicLookupClientProxy
         {
             try
             {
+                if (!validateInput(keyword))
+                {
+                    throw new ArgumentException("Invalid Input");
+                }
                 using HttpResponseMessage response = Task.Run(() => httpClient.GetAsync(httpClient.BaseAddress + "/GetArtist?keyword=" + keyword)).Result;
                 response.EnsureSuccessStatusCode();
 
@@ -58,6 +67,15 @@ namespace MusicLookupClientProxy
             {
                 throw ex;
             }
+        }
+
+        private bool validateInput(string input)
+        {
+            if (Regex.IsMatch(input, @"^[a-zA-Z0-9&$]+$"))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
