@@ -11,11 +11,13 @@ namespace MusicLookupService
 {
     public class Program
     {
+        //Main builds and runs the service 
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
         }
 
+        //Configures the Host and sets defaults for the service
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>

@@ -16,6 +16,7 @@ namespace MusicLookupService
 {
     public class Startup
     {
+        //Initailizes configuration
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
