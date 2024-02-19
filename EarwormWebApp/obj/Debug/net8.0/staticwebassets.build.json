@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZC0iC//nEmyhb9Sx8sS2HZey/WreHZSFEHVuGwLycS8=",
+  "Hash": "Q/qok9oRkGbQF2X9K4fpIT2VCC9np7+rjuWDI6Ju27s=",
   "Source": "EarwormWebApp",
   "BasePath": "_content/EarwormWebApp",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EarwormWebApp.styles.css",
-      "SourceId": "EarwormWebApp",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/EarwormWebApp",
-      "RelativePath": "EarwormWebApp.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\EarwormWebApp.styles.css"
-    },
-    {
-      "Identity": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EarwormWebApp.bundle.scp.css",
-      "SourceId": "EarwormWebApp",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/EarwormWebApp",
-      "RelativePath": "EarwormWebApp.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EarwormWebApp.bundle.scp.css"
-    },
     {
       "Identity": "D:\\Documents\\School\\Penn State\\Spring 2024\\SWENG-861\\Course Project\\Course_Project_Earworm\\EarwormWebApp\\wwwroot\\app.css",
       "SourceId": "EarwormWebApp",
