@@ -14,7 +14,7 @@ namespace MusicLookupClientProxy
         //Initializes HttpClient with basepath and baseAddress
         public MusicLookupClientProxy() 
         {
-            string basePath = "http://localhost:5000";
+            string basePath = "http://host.docker.internal:5000";
             httpClient = new()
             {
                 BaseAddress = new Uri(basePath + "/MusicLookup")

@@ -1,0 +1,18 @@
+C:\Program Files\Git\app\build\MusicLookupClientProxy.dll.config
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.csproj.AssemblyReference.cache
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.AssemblyInfoInputs.cache
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.AssemblyInfo.cs
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.csproj.CoreCompileInputs.cache
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.sourcelink.json
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\refint\MusicLookupClientProxy.dll
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\MusicLookupClientProxy.pdb
+C:\Program Files\Git\app\build\MusicLookupClientProxy.deps.json
+C:\Program Files\Git\app\build\MusicLookupClientProxy.dll
+C:\Program Files\Git\app\build\MusicLookupClientProxy.pdb
+D:\Documents\School\Penn State\Spring 2024\SWENG-861\Course Project\Course_Project_Earworm\MusicLookupClientProxy\obj\Release\net8.0\ref\MusicLookupClientProxy.dll
+D:\app\build\MusicLookupClientProxy.dll.config
+D:\app\build\MusicLookupClientProxy.deps.json
+D:\app\build\MusicLookupClientProxy.dll
+D:\app\build\MusicLookupClientProxy.pdb
