@@ -83,7 +83,7 @@ namespace MusicLookupClientProxy
         //Returns true if it is, false if it is not
         private bool validateInput(string input)
         {
-            if (Regex.IsMatch(input, @"^[a-zA-Z0-9&$]+$"))
+            if (Regex.IsMatch(input, @"^[a-zA-Z0-9&$!?,. ]+$"))
             {
                 return true;
             }
